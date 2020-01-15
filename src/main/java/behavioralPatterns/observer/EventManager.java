@@ -22,7 +22,7 @@ public class EventManager {
 
     public void unsubscribe(String eventType, EventListener listener){
         List<EventListener> users = listeners.get(eventType);
-        users.remove(users.indexOf(listener));
+        users.remove(listener);
     }
 
     public void notify(String eventType, File file){
