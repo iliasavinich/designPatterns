@@ -1,5 +1,7 @@
 package structuralPatterns.proxy;
 
+import static java.lang.System.out;
+
 public class ProxyPrinter implements Printer {
 
     private ConsolePrinter consolePrinter;
@@ -10,7 +12,9 @@ public class ProxyPrinter implements Printer {
 
     @Override
     public void print() {
+        out.println("Print Method Invocation Start");
         consolePrinter.print();
+        out.println("Print Method Invocation Finish");
     }
 
 }
